@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+    <h1 th:text="${message}"></h1>
+
+    <img th:src="${src.src1}" />
+    </br>
+    <img th:src="${src.src2}"/>
+    </br>
+    <span th:text="${user.id}"></span>
+    <span th:text="${user.name}"></span>
+    <span th:text="${user.age}"></span>
+
+</body>
+</html>

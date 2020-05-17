@@ -1,0 +1,39 @@
+server:
+  port: 80
+
+officn_ip:
+  1.1.1.1
+officn_port:
+  9999
+userbody:
+  name: 夏德锋
+  password: 123455
+  birthday: 1997.10.02
+  mobile: 13298418920
+  address: 竖岗
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/test?serverTimezone=GMT%2B8
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  main:
+    allow-bean-definition-overriding: true
+  #开始thymeleaf设置
+  thymeleaf:
+    #禁用模板缓存
+    cache: false
+    prefix: classpath:/templates/
+  #设置文字消息
+  messages:
+    encoding: UTF-8
+    basename: message_zh_CN
+##springboot整合mybatis
+#mybatis:
+#  mapper-locations: classpath:mapper/*.xml
+#  type-aliases-package: com.xdf.springbootdemo.pojo

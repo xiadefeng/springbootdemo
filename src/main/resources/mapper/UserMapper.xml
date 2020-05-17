@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper  namespace="com.xdf.springbootdemo.dao.UserDao">
+
+
+    <insert id="save" parameterType="com.xdf.springbootdemo.pojo.User">
+        insert into users(name,age) values(#{name},#{age})
+    </insert>
+    <update id="update" parameterType="com.xdf.springbootdemo.pojo.User">
+        update users set name=#{name},age=#{age} where id=#{id}
+    </update>
+    <delete id="delete" parameterType="java.lang.Long">
+    delete from users where id=#{id}
+</delete>
+
+
+    <select id="getAll"  resultType="com.xdf.springbootdemo.pojo.User">
+        select * from users
+    </select>
+
+    <select id="findOne" parameterType="java.lang.Long" resultType="com.xdf.springbootdemo.pojo.User">
+        select * from users where id=#{id}
+    </select>
+
+</mapper>

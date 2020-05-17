@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en"   xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+时间：<span th:text="${#dates.format(date,'yyyy-MM-dd HH:mm:ss')}">4564546</span></br>
+金额：<span th:text="'￥'+${#numbers.formatDecimal(price, 1, 2)}">180</span> </br>
+<!-- # 这里的含义是 如果 atc.text 这个变量多余200个字符，后面显示... -->
+<p th:text="${#strings.abbreviate(strText,60)}">内容内容内容</p>
+
+<!-- 判断字符串是否为空 -->
+<span th:if="${!#strings.isEmpty(str2)}">字符串str2不为空</span></br>
+<!-- 截取字符串，指定长度 -->
+<span th:text="${#strings.substring(str2,0,4)}">字符串str2的值</span>
+</body>
+</html>
