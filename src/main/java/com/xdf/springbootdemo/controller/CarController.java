@@ -99,6 +99,7 @@ public class CarController {
 
     public void fenzhi(){
         System.out.println("fenzhi1创建");
+        System.out.println("夏");
     }
 
 }
