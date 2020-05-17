@@ -97,4 +97,8 @@ public class CarController {
         webDataBinder.addCustomFormatter(new DateFormatter("yyyy-MM-dd HH:mm:ss"));
     }
 
+    public void fenzhi(){
+        System.out.println("fenzhi1创建");
+    }
+
 }
